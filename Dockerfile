@@ -1,6 +1,10 @@
-FROM nginx
+FROM node:16-alpine
 
+# Create app directory
+RUN mkdir -p /app
+COPY . /app/
+WORKDIR /app
+RUN npm install
 
-COPY index.html /usr/share/nginx/html/index.html
+CMD ["node", "server.js"]
 
-CMD ["nginx", "-g", "daemon off;"]

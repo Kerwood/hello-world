@@ -1,2 +1,4 @@
 # hello-world
-Simple Docker hello world container
+Simple hello world container
+
+Set a message with the `MESSAGE` environment variable.
